@@ -2,6 +2,8 @@
 
 export function ReserveCard() {
   // Placeholder values
+  // TODO: Will show real contract balance after Pedro provides address
+  // Will use useBalance hook with contract address once available
   const balance = '0.50'
   const refillAmount = '0.05'
   const availableRefills = Math.floor(parseFloat(balance) / parseFloat(refillAmount))

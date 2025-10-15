@@ -48,7 +48,7 @@ export function MimicTaskCard() {
         {/* Right side - Links */}
         <div className="space-y-3 flex flex-col justify-center">
           <a
-            href="https://mimic.fi"
+            href="https://protocol.mimic.fi/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-purple-400 hover:text-purple-300 transition-colors font-medium flex items-center gap-1"
@@ -56,7 +56,9 @@ export function MimicTaskCard() {
             View on Mimic Protocol →
           </a>
           <a
-            href="#"
+            href="https://amoy.polygonscan.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-400 hover:text-gray-300 transition-colors font-medium flex items-center gap-1"
           >
             View Contract →

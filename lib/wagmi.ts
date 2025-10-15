@@ -1,31 +1,17 @@
 import { http, createConfig } from 'wagmi'
-import { polygonAmoy } from 'wagmi/chains'
+import { polygon, polygonAmoy } from 'wagmi/chains'
 import { metaMask } from 'wagmi/connectors'
 import { QueryClient } from '@tanstack/react-query'
 
-// Custom chain configuration for Polygon Amoy testnet
-export const polygonAmoyTestnet = {
-  ...polygonAmoy,
-  id: 80002,
-  name: 'Polygon Amoy Testnet',
-  rpcUrls: {
-    default: {
-      http: ['https://rpc-amoy.polygon.technology/'],
-    },
-    public: {
-      http: ['https://rpc-amoy.polygon.technology/'],
-    },
-  },
-}
-
-// Wagmi configuration
+// Wagmi configuration with both Polygon Mainnet and Amoy Testnet
 export const wagmiConfig = createConfig({
-  chains: [polygonAmoyTestnet],
+  chains: [polygon, polygonAmoy],
   connectors: [
     metaMask(),
   ],
   transports: {
-    [polygonAmoyTestnet.id]: http('https://rpc-amoy.polygon.technology/'),
+    [polygon.id]: http(),
+    [polygonAmoy.id]: http('https://rpc-amoy.polygon.technology/'),
   },
 })
 
