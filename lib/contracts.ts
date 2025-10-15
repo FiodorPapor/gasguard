@@ -1,5 +1,3 @@
-import WalletRefillABI from './abis/WalletRefill.json'
-
 // Contract configuration for GasGuard
 export const CONTRACTS = {
   // Polygon Amoy Testnet (chainId: 80002)
