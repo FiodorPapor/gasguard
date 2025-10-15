@@ -1,25 +1,55 @@
+import { Header } from '@/components/Header'
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold text-white mb-4">
-            ⛽ GasGuard
-          </h1>
-          <p className="text-xl text-purple-200">
+    <div className="min-h-screen bg-gray-950">
+      <Header />
+      
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-8">
+          <p className="text-xl text-gray-400">
             Never run out of gas on Polygon
           </p>
         </div>
-        
-        <div className="max-w-4xl mx-auto">
-          {/* Empty container for future components */}
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-purple-500/20 p-8 min-h-[400px]">
-            <p className="text-gray-400 text-center">
-              Dashboard components will be added here
-            </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          {/* Hot Wallet Status Card */}
+          <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 transition-all hover:border-purple-600/50">
+            <h2 className="text-xl font-semibold text-gray-100 mb-4">
+              Hot Wallet Status
+            </h2>
+            <div className="space-y-3">
+              <p className="text-gray-400">
+                Monitor your hot wallet balance and activity
+              </p>
+            </div>
+          </div>
+
+          {/* GasGuard Reserve Card */}
+          <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 transition-all hover:border-purple-600/50">
+            <h2 className="text-xl font-semibold text-gray-100 mb-4">
+              GasGuard Reserve
+            </h2>
+            <div className="space-y-3">
+              <p className="text-gray-400">
+                Your automated gas refill configuration
+              </p>
+            </div>
+          </div>
+
+          {/* Mimic Task Status Card */}
+          <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 transition-all hover:border-purple-600/50 md:col-span-2">
+            <h2 className="text-xl font-semibold text-gray-100 mb-4">
+              Mimic Task Status
+            </h2>
+            <div className="space-y-3">
+              <p className="text-gray-400">
+                Track your automated gas refill tasks
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-  );
+  )
 }
