@@ -1,0 +1,16 @@
+version: 1.0.0
+
+name: Balance Monitoring Task
+
+description: Fulfill an account's balance based on threshold in USD
+
+inputs:
+  - chainId: uint32
+  - token: address
+  - amount: uint256
+  - fee: uint256
+  - recipient: address
+  - thresholdUSD: uint32
+
+abis:
+  - ERC20: './abis/ERC20.json'
